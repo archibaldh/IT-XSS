@@ -21,7 +21,7 @@
 				</section>
 				<section>
 					<h4>So lets say you have a website that looks like this</h4>
-					<img class="fragment fade-in" src="assets/whatsYourName.png"/>
+					<input type="text" style="width: 60vw; height: 16vh; font-size: 7vw;" class="fragment fade-in " placeholder="What's your name?">
 					<pre class="fragment fade-in"><code data-trim>
 							<input type="text"placeholder="What's your name?"/>
 					</code></pre>
@@ -47,10 +47,20 @@
 					<span>Imagine you have a website designed exclusively to showcase pictures of dogs. As an attacker, I might inject a script to turn them all into cats!</span>
 <!--						Include like an image of this dog website, and then replace them with cats!!!-->
 				</section>
+					<section>
+						<h4>Allow me to demonstrate!</h4>
+						<p>Type your name into the input box.</p>
+						<section>
+						<input id="input1" type="text" style="width: 52vw; height: 14vh; font-size: 6vw;" placeholder="What's your name?">
+							<button style="width: 23vw; height: 14vh; font-size: 6vw;" onclick="input()">Submit</button>
+						</section>
+						<span id="inputDisplay1"></span>
+					</section>
 				</section>
+
 			</div>
 		</div>
-
+		<script src="js/script.js"></script>
 		<script src="dist/reveal.js"></script>
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
