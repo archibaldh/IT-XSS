@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Cross site scripting by Archibald Hansen</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/blood.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/atelier-lakeside-dark.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section><span class="r-fit-text"><b>Cross Site Scripting (XSS)</b></span>
+					<span style="font-size: 40px">By Archibald Hansen</span>
+				</section>
+				<section>
+					<h4>So lets say you have a website that looks like this</h4>
+					<img class="fragment fade-in" src="assets/whatsYourName.png"/>
+					<pre class="fragment fade-in"><code data-trim>
+							<input type="text"placeholder="What's your name?"/>
+					</code></pre>
+					<p class="fragment fade-in">A simple input box asking for the user's name. What could<span class="fragment fade-in">n't</span> go wrong?</p>
+				</section>
+				<section>
+					<h4>What's wrong with my website!?</h4>
+					<p>If you have a very basic website, nothing is wrong with that input box. Let's expand our website a little, and link it to a database to see the catastrophic consequences of one simple input box.</p>
+				</section>
+				<section>
+					When your input box takes the exact message it sees and sends it to your database, it encourages...
+				</section>
+				<section>
+				<section>
+					<span class="r-fit-text"><b>ATTACKERS!</b></span>
+					<span class="fragment zoom-in">to inject scripts into your database!</span>
+				</section>
+				<section>
+					<h6>Hang on hang on... what do you mean "Inject scripts"?</h6>
+					<span>"Injecting scripts" essentially means instructing your website to do things you didn't design it for.</span>
+				</section>
+				<section>
+					<span>Imagine you have a website designed exclusively to showcase pictures of dogs. As an attacker, I might inject a script to turn them all into cats!</span>
+<!--						Include like an image of this dog website, and then replace them with cats!!!-->
+				</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
